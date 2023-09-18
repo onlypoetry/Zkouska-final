@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styl.css" />
+    <title>O aplikaci</title>
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <h1>PojištěníApp</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Domů</a></li>
+          <li><a href="pojistenci.html">Pojištěnci</a></li>
+          <li class="aktivni"><a href="info.html">O aplikaci...</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <article>
+      <header>
+        <h1>O aplikaci</h1>
+      </header>
+      <section>
+        <p class="dobloku">
+          Aplikace Pojištění slouží jako závěrečný projekt ke kurzu
+          <em>Programátor webových aplikací - JavaScript</em>. Program sestává z
+          celkem osmi souborů, z nichž samotnému JavaScriptu jsou věnovány
+          čtyři.
+        </p>
+        <p class="dobloku">
+          V souboru <i><b>Validator.js</b></i> naleznete kód pro validaci
+          vstupních údajů, které uživatel zadává do čtyř samostatných polí. Tato
+          pole jsou ošetřena tak, abych např. do pole <i>Jméno</i> nemohlo být
+          zadáno číslo a naopak v poli <i>Věk</i> či <i>Telefon</i> nemohl
+          uživatel zadávat písmena.
+        </p>
+        <p class="dobloku">
+          <i><b>Pojistenec.js</b></i> slouží jako třída pro instance pojištěnců,
+          kteří jsou následně evidování do tabulky (viz sekce
+          <em>Pojistění</em>).
+        </p>
+        <p class="dobloku">
+          Hlavní částí aplikace je ukládání a následný výpis jednotlivých
+          pojištěnců. Tato část se nachází v <i><b>EvidencePojistenych.js</b></i
+          >. V&nbsp;konstruktoru jsou předány id jednotlivých HTML elementů, ze
+          kterých jsou jsou ostatním částem předávána jednotlivá data. Zároveň s
+          tím jsou předány elementy sloužící k výpisu případných chybových zpráv
+          (při nezdařené validaci) a zejména k evidenci pojištěnců.
+        </p>
+        <p class="dobloku">
+          V poslední části <i><b>obsluha.js</b></i> je provedena obsluha
+          událostí vytvořením instance třídy EvidencePojistenych.
+        </p>
+      </section>
+    </article>
+
+    <footer>Vytvořil &copy;Ondřej Minks 2023</footer>
+  </body>
+</html>

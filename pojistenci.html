@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styl.css">
+    <title>Pojištěnci</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <h1>PojištěníApp</h1>  
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li class="aktivni"><a href="pojistenci.html">Pojištěnci</a></li>
+                <li><a href="info.html">O aplikaci...</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article>
+        <header>
+            <h1>Pojištěnci</h1>
+        </header>
+        <section>
+            <div class="centrovany" id="seznam"></div>
+            <table>
+                <thead>
+                  <tr>
+                    <th>Jméno a příjmení</th>
+                    <th>Telefon</th>
+                    <th>Věk</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+        </section>
+    </article>
+
+    <article>
+        <header>
+            <h1>Nový pojištěnec</h1>
+        </header>
+        <section>
+            <img src="img/uzivatel.png" alt="Uživatel" class="uzivatel obtekani-zprava"/>
+            <form>
+                <div class="flex-wrap">
+                    <div class="flex-col">
+                        <label class="popis-udaju" for="jmeno">Jméno</label><br>
+                        <input class="udaje-pojistence" type="text" id="jmeno" name="jmeno" placeholder="Jan">
+                    </div>
+                    <div class="flex-col">
+                        <label class="popis-udaju" for="prijmeni">Příjmení</label><br>
+                        <input class="udaje-pojistence" type="text" id="prijmeni" name="prijmeni" placeholder="Novák">
+                    </div>
+                </div>    
+                <div class="flex-wrap">
+                    <div class="flex-col">
+                        <label class="popis-udaju" for="vek">Věk</label><br>
+                        <input class="udaje-pojistence" type="number" id="vek" name="vek" placeholder="31">
+                    </div>
+                    <div class="flex-col">
+                        <label class="popis-udaju" for="telefon">Telefon</label><br>
+                        <input class="udaje-pojistence" type="text" id="telefon" name="telefon" placeholder="731 584 972">
+                    </div>
+                </div>
+            </form>
+            <div class="cistic"></div>
+        <div class="element-nastred">
+            <button class="central" id="tlacitko-ulozit" type="submit">Uložit</button>
+        </div>
+        <div class="centrovany" id="chybne-udaje"></div>
+        </section>
+    </article>
+    
+    <footer>Vytvořil &copy;Ondřej Minks 2023</footer>
+
+    <script src="js/Pojistenec.js"></script>
+    <script src="js/Validator.js"></script>
+    <script src="js/EvidencePojistenych.js"></script>
+    <script src="js/obsluha.js"></script>
+
+</body>
+</html>

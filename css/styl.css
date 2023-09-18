@@ -1,0 +1,204 @@
+body {
+  background: #ffffff;
+  font: 14px Verdana;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 100px 0 0 0;
+  min-width: 960px;
+}
+
+body > header {
+  background: #414042;
+  height: 70px;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  position: fixed;
+  z-index: 1; /* hlavička v nejvyšší vrstvě */
+  top: 0; /* hlavička vždy na horním okraji stránky */
+}
+
+#logo {
+  margin: auto 0 auto 40px;
+}
+
+#logo h1 {
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: white;
+}
+
+nav ul {
+  /* navigační menu - uspořádání */
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 0 0 100px;
+}
+
+nav ul li {
+  /* nastavení jednotlivých položek seznamu - přidání odsazení, aj. */
+  margin: 0 5px;
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+
+nav ul a {
+  /* nastavení písma položek - barva, zrušení podtržení, aj.*/
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+nav ul a:hover,
+.aktivni a {
+  /* zvýraznění aktivní položky v navigaci */
+  background: #686a6d;
+  border-radius: 5px;
+  filter: brightness(120%) contrast(90%);
+  transition: 0.2s;
+}
+
+#tlacitko-ulozit:hover {
+  filter: brightness(120%) contrast(90%);
+  transition: 0.2s;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+body > footer {
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 0.8rem;
+  height: 35px;
+  width: 100%;
+  color: white;
+  background: #414042;
+  padding: 10px 0 0 0;
+  position: fixed;
+  bottom: 0;
+}
+
+article {
+  max-width: 960px;
+  margin: 0 auto 50px auto;
+}
+
+article header {
+  height: 60px;
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  color: #00386b;
+  padding: 10px 0;
+}
+
+article h1 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 0; /* nastavení okraje u hlavních nadpisů na 0 */
+}
+
+article h2 {
+  font-size: 1.4rem;
+}
+
+article section p {
+  line-height: 1.6rem;
+}
+
+.centrovany {
+  text-align: center;
+}
+
+.dobloku {
+  text-align: justify;
+}
+
+.udaje-pojistence {
+  height: 35px;
+  width: 250px;
+  border: 1px solid rgb(214, 203, 203);
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+#tlacitko-ulozit {
+  background: #2383dd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 12px 50px;
+  margin-top: 50px;
+}
+
+.element-nastred {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.element-vpravo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#tlacitko-ulozit:active {
+  background: #204199;
+}
+
+.uzivatel {
+  width: 100px; /* šířka obrázku */
+  border: 1px solid black;
+  margin: 20px auto auto auto;
+}
+
+.obtekani-zprava {
+  float: left; /* Obrázek bude umístěn vlevo a obtékán textem zprava */
+}
+
+.obtekani-zleva {
+  float: right; /* Obrázek bude umístěn vpravo a obtékán textem zleva */
+}
+
+.cistic {
+  clear: both; /* hodnoty left, right a both - ukončení obtékání plovoucích elementů */
+}
+
+table {
+  width: 100%;
+}
+
+table,
+th,
+tr,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: start;
+}
+
+#chybne-udaje {
+  margin-top: 20px;
+  color: red;
+  font-style: italic;
+}
