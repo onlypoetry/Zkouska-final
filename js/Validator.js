@@ -14,7 +14,7 @@ class Validator {
   /**
    * Validační metoda, která bere data z formulářových polí a validuje je.
    * V případě neúspěšné validace uloží chybové hlášení do chybových zpráv
-   * a ty následně vypíše do elementu v HTML stránce
+   * a ty následně vypíše do elementu v HTML stránce (po 4 s zprávy zmizí)
    * @param {string} jmeno jméno pojištěnce
    * @param {string} prijmeni příjmení pojištěnce
    * @param {number} vek věk pojištěnce
@@ -28,7 +28,6 @@ class Validator {
     const overPrijmeni = this.#validujPrijmeni(prijmeni);
     const overVek = this.#validujVek(vek);
     const overTelefon = this.#validujTel(telefon);
-    let vymazat = this.chybneUdaje.innerHTML = "";
 
     if (overJmeno) {
       chyboveZpravy += overJmeno;
@@ -48,6 +47,10 @@ class Validator {
 
     if (chyboveZpravy) this.jeValidni = false;
     this.chybneUdaje.innerHTML = chyboveZpravy;
+
+    setTimeout(() => {
+      this.chybneUdaje.innerHTML = "";
+    }, "4000");
 
   }
 
